@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
-// import heroImg from "../public/img/hero.png";
+
 
 interface HeroProps { }
 
@@ -14,12 +14,11 @@ const Hero: React.FC<HeroProps> = () => {
                             src="/Hero.svg"
                             width="616"
                             height="617"
-                            className={"object-cover"}
+                            className={"object-cover "}
                             alt="Hero Illustration"
                             placeholder="empty"
                         />
-                    </div>
-                    <div className="absolute bottom-72 right-32 md:bottom-0 md:right-60 lg:right-60 xl:right-[300px]">
+                    <div className="absolute bottom-0 right-20   xl:right-[200px]">
                         <Image
                             src="/HeroSecond.svg"
                             width="616"
@@ -28,6 +27,7 @@ const Hero: React.FC<HeroProps> = () => {
                             alt="Hero Illustration"
                             placeholder="empty"
                         />
+                    </div>
                     </div>
                 </div>
                 <div className="flex items-center w-full mt-10 lg:w-1/2">
