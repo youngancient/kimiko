@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                                     </svg>
                                 </Disclosure.Button>
 
-                                <Disclosure.Panel className="flex flex-col gap-3 items-center shadow w-full my-5 p-10 lg:hidden">
+                                <Disclosure.Panel className="flex flex-col gap-6 items-center shadow w-full my-5 p-10 lg:hidden">
                                     {navigation.map((item, index) => (
                                         <Link key={index} href="/" passHref>
                                             <Link href="/" className="w-full px-4 py-2 -ml-4 text-xl text-gray font-bold rounded-md dark:text-blue hover:text-blue focus:text-blue  dark:focus:bg-gray focus:outline-none">
@@ -65,6 +65,8 @@ const Navbar: React.FC = () => {
                                             Get Started
                                         </Link>
                                     </Link>
+
+                                    <ThemeChanger />
                                 </Disclosure.Panel>
                             </div>
                         </>
