@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+>>>>>>> 84f12964ed2eeaae8460da5e4d8d96e949a94016
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 input, button{
   outline: 0;
   border: 0;
@@ -12,4 +20,9 @@ input, button{
 }
 a{
   text-decoration: none;
+=======
+.features {
+  display: flex;
+  flex-wrap: wrap;
+>>>>>>> 84f12964ed2eeaae8460da5e4d8d96e949a94016
 }
