@@ -7,7 +7,7 @@ export const AuthStyles = styled.div`
       rgba(0, 0, 0, 0.5) 100%
     ),
     url(/assets/auth.png),
-    lightgray -165.523px -2.45px / 175.484% 100% no-repeat ;
+    lightgray -165.523px -2.45px / 175.484% 100% no-repeat;
   min-height: 100vh;
   .form-div {
     background: #fff;
@@ -101,7 +101,7 @@ export const AuthStyles = styled.div`
     gap: 1.5rem;
   }
   .btn {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
   .btn button {
     border-radius: 62.5rem;
@@ -124,78 +124,90 @@ export const AuthStyles = styled.div`
     letter-spacing: 0.00938rem;
     text-transform: capitalize;
   }
-  .logo-div-mobile, .logo-div-desktop{
-    padding: 2rem 2rem ;
+  .logo-div-mobile,
+  .logo-div-desktop {
+    padding: 2rem 2rem;
   }
-  .nav{
+  .nav {
     margin-top: 1rem;
-    p{
+    p {
       color: #768396;
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: Inter;
-font-size: 0.75rem;
-font-style: normal;
-font-weight: 700;
-line-height: 1rem; /* 133.333% */
+      text-align: center;
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Inter;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1rem; /* 133.333% */
     }
-    strong{
-      color: var(--tint-800, #1A87FF);
+    strong {
+      color: var(--tint-800, #1a87ff);
     }
   }
-  @media (max-width: 998px){
-    .form-div{
+  @media (max-width: 998px) {
+    .form-div {
       width: 70%;
       margin: 0 auto;
       border-radius: 1.25rem;
     }
-    .logo-div-desktop{
-      display: none
+    .logo-div-desktop {
+      display: none;
     }
-    .fl{
+    .fl {
       padding-bottom: 4rem;
     }
   }
-    @media (max-width: 500px){
-      .form-div{
-        width: 90%;
-      }
-    } 
-    @media (min-width: 768px){
-      .logo-div-mobile{
-        width: 70%;
-        margin: 0 auto;
-      }
+  @media (max-width: 500px) {
+    .form-div {
+      width: 90%;
     }
-    @media (min-width: 998px){
-      background: lightgray ;
-      .fl{
-        display: flex;
-        justify-content: center;
-      }
-      .logo-div-desktop{
-        height: 100vh;
-        width: 40%;
-        border-radius: 1.25rem 0 0 1.25rem;
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.5) 0%,
-          rgba(0, 0, 0, 0.5) 100%
-        ),
-        url(/assets/auth.png),
-        lightgray -165.523px -2.45px / 175.484% 100% no-repeat ;
-      }
-      .fl{
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-      .form-div{
-        padding: 4rem 5rem 3.125rem 3rem;
-        border-radius: 0 1.25rem 1.25rem 0;
-      }
-      .logo-div-mobile{
-        display: none;
-      }
-    } 
-    
-    `;
+  }
+  @media (min-width: 768px) {
+    .logo-div-mobile {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 998px) {
+    background: lightgray;
+    .fl {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .logo-div-desktop {
+      min-height: 100vh;
+      width: 40%;
+      border-radius: 1.25rem 0 0 1.25rem;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url(/assets/auth.png) no-repeat,
+      lightgray -165.523px -2.45px / 175.484% 100% no-repeat;
+
+    }
+    .fl {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .form-div {
+      padding: 4rem 5rem 3.125rem 3rem;
+      border-radius: 0 1.25rem 1.25rem 0;
+      width: 40%;
+    }
+    .logo-div-mobile {
+      display: none;
+    }
+  }
+`;
+
+
+export const SignupStyles = styled(AuthStyles)`
+  .choose{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+`

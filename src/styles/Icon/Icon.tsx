@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const WhiteLogoStyle = styled.div`
   h3 {
@@ -14,6 +14,11 @@ export const WhiteLogoStyle = styled.div`
   gap: 0.9375rem;
 `;
 
+export const LogoStyle = styled(WhiteLogoStyle)`
+  h3{
+    color: var(--tint-800, #1a87ff);
+  }
+`;
 
 export const BacktbtnStyles = styled.button`
   border-radius: 1.25rem;
@@ -35,3 +40,19 @@ export const BacktbtnStyles = styled.button`
     line-height: 1rem; /* 133.333% */
   }
 `;
+
+
+// features
+
+interface IconWrapper{
+  color : string;
+}
+
+export const IconWrapperStyles = styled.div<IconWrapper>`
+  width: fit-content;
+  border-radius: 1.25rem;
+  ${(props)=> props.color && css`
+    background: ${props.color};
+  `}
+  padding: 0.75rem;
+`
