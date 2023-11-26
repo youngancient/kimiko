@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Container from "./Container";
+import { useRouter } from "next/router";
 
 
 interface HeroProps { }
 
 const Hero: React.FC<HeroProps> = () => {
+    const router = useRouter();
     return (
         <>
             <Container className="flex flex-wrap lg:flex-row-reverse">
@@ -42,8 +44,8 @@ const Hero: React.FC<HeroProps> = () => {
                         </div>
 
                         <div className="flex flex-row md:flex-row gap-10 items-center">
-                            <button className="px-10 py-3 whitespace-nowrap text-white bg-blue rounded-full ">
-                                Log In
+                            <button className="px-10 py-3 whitespace-nowrap text-white bg-blue rounded-full " onClick={()=> router.push("/auth/signup")}>
+                                Create Account
                             </button>
                             <button className="px-10 py-3 whitespace-nowrap text-blue border bg-white rounded-full ">
                                 Learn More

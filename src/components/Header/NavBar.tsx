@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
-import ThemeChanger from "./DarkSwitch";
+import ThemeChanger from "../DarkSwitch";
+import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
     const navigation = ["Home", "Features", "About Us"];
-
+    const router = useRouter();
     return (
         <div className="w-full">
             <nav className="container border-b border-[#CCE4FF] relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
@@ -78,11 +79,11 @@ const Navbar: React.FC = () => {
                     <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
                         {navigation.map((menu, index) => (
                             <li className="mr-3 nav__item" key={index}>
-                                <Link href="/" passHref>
+                                {/* <Link href="/" passHref> */}
                                     <Link href="/" className="inline-block px-4 py-2 text-lg font-bold text-gray dark:text-blue hover:text-blue focus:text-blue  dark:focus:bg-gray dark:hover:text-white focus:outline-none">
                                         {menu}
                                     </Link>
-                                </Link>
+                                {/* </Link> */}
                             </li>
                         ))}
                     </ul>
@@ -90,8 +91,8 @@ const Navbar: React.FC = () => {
 
                 <div className="hidden mr-3 space-x-4 lg:flex nav__item">
                     <Link href="/" passHref>
-                        <button className="px-10 py-3 text-white bg-blue rounded-full md:ml-5">
-                            Log In
+                        <button className="px-10 py-3 text-white bg-blue rounded-full md:ml-5" onClick={()=> router.push("/auth/signup")}>
+                            Create Account
                         </button>
                     </Link>
 

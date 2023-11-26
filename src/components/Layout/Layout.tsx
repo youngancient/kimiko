@@ -7,9 +7,9 @@ export interface ILayout {
 
 const Layout: FunctionComponent<ILayout> = ({ children }) => {
   return (
-    <LayoutStyles>
+      <>
       {children}
-    </LayoutStyles>
+      </>
   );
 };
 

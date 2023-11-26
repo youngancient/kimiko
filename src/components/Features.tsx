@@ -1,9 +1,12 @@
 import Image from "next/image";
-import React from "react";
+import React, { ReactNode } from "react";
 import Container from "./Container";
+import { IconWrapperStyles } from "@/styles/Icon/Icon";
+import { Delivery, DocIcon, Education, RewardIcon, ReminderIcon } from "./Icons/Icons";
 
 interface Feature {
-    image: string;
+    icon : ReactNode;
+    color: string;
     text: string;
     header: string;
     learnMoreText: string;
@@ -12,33 +15,38 @@ interface Feature {
 const Features: React.FC = () => {
     const features: Feature[] = [
         {
-            image: "/Hero.svg",
+            icon : <Delivery />,
+            color : "#D7ECFF",
             header: "Medication Delivery",
             text: "Share a real testimonial that hits some of your benefits from one of your popular customers.",
             learnMoreText: "Learn More >",
         },
         {
-            image: "/Hero.svg",
+            icon : <ReminderIcon />,
+            color : "#F9EDC4",
             header: "Effective Reminders",
             text: "Make sure you only pick the right sentence to keep it short and simple.",
             learnMoreText: "Learn More >",
         },
         {
-            image: "/Hero.svg",
+            icon: <Education />,
             header: "Effective Reminders",
+            color : "#E7F6EC",
             text: "This is an awesome landing page template I've seen. I would use this for anything.",
             learnMoreText: "Learn More >",
         },
         {
-            image: "/Hero.svg",
+            icon: <DocIcon />,
             header: "Doctor Collaboration",
-            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam id ipsa harum quos repellat aliquid qui ducimus placeat cum ullam consequatur repudiandae dignissimos explicabo, obcaecati, quis ad dolore modi?",
+            color : "#E7F6EC",
+            text: "Your care team tracks adherence to proactively prevent issues",
             learnMoreText: "Learn More >",
         },
         {
-            image: "/Hero.svg",
+            icon : <RewardIcon />,
+            color : "#FFE7CC",
             header: "Rewarding Motivations",
-            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam id ipsa harum quos repellat aliquid qui ducimus placeat cum ullam consequatur repudiandae dignissimos explicabo, obcaecati, quis ad dolore modi?",
+            text: "Achieve your health goals and earn points to treat yourself",
             learnMoreText: "Learn More >",
         },
     ];
@@ -46,9 +54,9 @@ const Features: React.FC = () => {
     return (
         <div className="mt-10 bg-[#FBFBFD] p-2">
             <div className="flex flex-col gap-3 items-center justify-center">
-                <h1 className="lg:w-[577px] text-[#006] text-2xl lg:text-6xl font-bold">Distinctive Features</h1>
+                <h1 className="lg:w-[577px] text-[#006] text-2xl lg:text-5xl font-bold">Distinctive Features</h1>
                 <span className="lg:w-[703px] text-center text-black">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quibusdam id ipsa harum quos repellat aliquid qui ducimus placeat cum ullam consequatur repudiandae dignissimos explicabo, obcaecati, quis ad dolore modi?
+                With Kimiko, you get a smart and simple way to take your meds, track your health, and connect with your care team.
                 </span>
             </div>
             <Container>
@@ -56,7 +64,9 @@ const Features: React.FC = () => {
                     {features.map((feature, index) => (
                         <div key={index} className="md:max-w-[300px] lg:max-w-[450px] border-2 rounded-lg border-gray border-opacity-10 ">
                             <div className="flex flex-col gap-6 justify-between w-full h-full  px-10 rounded-2xl py-10 dark:bg-trueGray-800">
-                                <Image src={feature.image} width="40" height="40" alt="Avatar" className="rounded-lg" />
+                                <IconWrapperStyles color={feature.color}>
+                                    {feature.icon}
+                                </IconWrapperStyles>
                                 <h1 className="font-bold text-2xl whitespace-nowrap">{feature.header}</h1>
                                 <p className="text-base text-black leading-normal dark:text-white">{feature.text}</p>
                                 <span className="text-gray font-bold cursor-pointer">{feature.learnMoreText}</span>
