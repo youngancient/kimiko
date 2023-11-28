@@ -5,6 +5,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Navbar from '@/components/Header/NavBar';
+import ScrollUp from '@/components/Layout/ScrollUp';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {!router.pathname.includes("auth") && <Navbar />}
       <Component {...pageProps} />
       {!router.pathname.includes("auth") && <Footer />}
+        <ScrollUp />
     </Layout>
     </ThemeProvider>
   )
