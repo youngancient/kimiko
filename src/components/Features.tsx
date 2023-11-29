@@ -52,10 +52,10 @@ const Features: React.FC = () => {
     ];
 
     return (
-        <div className="mt-10 bg-[#FBFBFD] p-2">
+        <div className="mt-10 bg-[#FBFBFD] dark:bg-black p-2">
             <div className="flex flex-col gap-3  items-center justify-center">
-                <h1 className="lg:w-[577px] overflow-hidden mt-10 text-[#006] text-3xl lg:text-5xl font-bold">Distinctive Features</h1>
-                <span className="lg:w-[703px] text-center p-3 lg:p-0 text-black">
+                <h1 className="lg:w-[577px] overflow-hidden mt-10 text-[#006] dark:text-white text-3xl lg:text-5xl font-bold">Distinctive Features</h1>
+                <span className="lg:w-[703px] text-center p-3 lg:p-0 text-black dark:text-white">
                 With Kimiko, you get a smart and simple way to take your meds, track your health, and connect with your care team.
                 </span>
             </div> 

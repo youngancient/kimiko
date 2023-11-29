@@ -6,7 +6,7 @@ export const FooterStyle = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background: var(--tint-100, #cce4ff);
+  background: var(--tint-100, #FBFBFD);
   .first {
     display: flex;
     flex-direction: column;

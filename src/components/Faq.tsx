@@ -91,17 +91,17 @@ const Faq: React.FC = () => {
   }, []);
 
   return (
-    <div className=" bg-[#CCE4FF]">
+    <div className=" bg-[#CCE4FF] dark:bg-black">
       <Container>
         <div className=" flex relative flex-col     gap-10 md:items-center justify-center">
           <div
             ref={headingRef}
             className="flex flex-col justify-center  items-center gap-2"
           >
-            <h1 className="md:leading-[52px] text-[#091E42] py-2 md:text-4xl text-center   text-3xl font-extrabold">
+            <h1 className="md:leading-[52px] text-[#091E42] dark:text-white py-2 md:text-4xl text-center   text-3xl font-extrabold">
               Frequently Asked Questions (FAQS)
             </h1>
-            <p className="text-md  font-normal text-center  text-[#667085]">
+            <p className="text-md  font-normal text-center  text-[#667085] dark:text-white">
               Your Questions, Our Answers: Navigating Kimiko with Confidence
             </p>
           </div>
@@ -110,7 +110,7 @@ const Faq: React.FC = () => {
             {filteredData.map((item, index) => (
               <div
                 key={index}
-                className="cursor-pointer p-3  px-3 bg-[#B2D7FF] rounded-xl"
+                className="cursor-pointer p-3 w-full px-3 bg-[#B2D7FF] rounded-xl"
               >
                 <div
                   className="flex items-center justify-between mb-4"
@@ -118,7 +118,7 @@ const Faq: React.FC = () => {
                 >
                   <div className="flex w-full justify-between items-center">
                     <div className="flex flex-col p-3 gap-4">
-                      <span className="text-[#091E42] font-normal text-lg lg:text-xl">
+                      <span className="text-[#091E42] w-[200px] md:w-full font-bold text-lg lg:text-xl">
                         {item.title}
                       </span>
                     </div>
