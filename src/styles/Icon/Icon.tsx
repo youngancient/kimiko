@@ -27,6 +27,7 @@ export const BacktbtnStyles = styled.button`
   width: 6.625rem;
   height: 2.5rem;
   padding: 0.625rem;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;

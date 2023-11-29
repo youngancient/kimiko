@@ -25,6 +25,7 @@ export const AuthStyles = styled.div`
       /* Body text- web */
       font-family: Inter;
       font-size: 1.5rem;
+      overflow: hidden;
       font-style: normal;
       font-weight: 700;
       line-height: 1.5rem; /* 100% */

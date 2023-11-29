@@ -53,8 +53,8 @@ const Features: React.FC = () => {
 
     return (
         <div className="mt-10 bg-[#FBFBFD] p-2">
-            <div className="flex flex-col gap-3 items-center justify-center">
-                <h1 className="lg:w-[577px] text-[#006] text-2xl lg:text-5xl font-bold">Distinctive Features</h1>
+            <div className="flex flex-col gap-3  items-center justify-center">
+                <h1 className="lg:w-[577px] overflow-hidden mt-10 text-[#006] text-3xl lg:text-5xl font-bold">Distinctive Features</h1>
                 <span className="lg:w-[703px] text-center text-black">
                 With Kimiko, you get a smart and simple way to take your meds, track your health, and connect with your care team.
                 </span>
@@ -67,7 +67,7 @@ const Features: React.FC = () => {
                                 <IconWrapperStyles color={feature.color}>
                                     {feature.icon}
                                 </IconWrapperStyles>
-                                <h1 className="font-bold text-2xl whitespace-nowrap">{feature.header}</h1>
+                                <h1 className="font-bold text-xl lg:text-2xl whitespace-nowrap">{feature.header}</h1>
                                 <p className="text-base text-black leading-normal dark:text-white">{feature.text}</p>
                                 <span className="text-gray font-bold cursor-pointer">{feature.learnMoreText}</span>
                             </div>
