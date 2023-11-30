@@ -52,18 +52,18 @@ const Features: React.FC = () => {
     ];
 
     return (
-        <div className="mt-10 bg-[#FBFBFD] p-2">
+        <div className="mt-10 bg-[#FBFBFD] dark:bg-black p-2">
             <div className="flex flex-col gap-3  items-center justify-center">
-                <h1 className="lg:w-[577px] overflow-hidden mt-10 text-[#006] text-3xl lg:text-5xl font-bold">Distinctive Features</h1>
-                <span className="lg:w-[703px] text-center text-black">
+                <h1 className="lg:w-[577px] overflow-hidden mt-10 text-[#006] dark:text-white text-3xl lg:text-5xl font-bold">Distinctive Features</h1>
+                <span className="lg:w-[703px] text-center p-3 lg:p-0 text-black dark:text-white">
                 With Kimiko, you get a smart and simple way to take your meds, track your health, and connect with your care team.
                 </span>
-            </div>
+            </div> 
             <Container>
                 <div className="grid grid-flow-col auto-cols-fr features gap-10 justify-center">
                     {features.map((feature, index) => (
                         <div key={index} className="md:max-w-[300px] lg:max-w-[450px] border-2 rounded-lg border-gray border-opacity-10 ">
-                            <div className="flex flex-col gap-6 justify-between w-full h-full  px-10 rounded-2xl py-10 dark:bg-trueGray-800">
+                            <div className="flex flex-col gap-6 justify-between w-full h-full  px-4 rounded-2xl py-10 dark:bg-trueGray-800">
                                 <IconWrapperStyles color={feature.color}>
                                     {feature.icon}
                                 </IconWrapperStyles>

@@ -16,13 +16,13 @@ const Links:ILinks[] = [
 
 const Footer = () => {
     return (  
-        <FooterStyle>
+        <FooterStyle className="dark:bg-black dark:text-white">
             <div className="first">
 
             <div className="logo">
                 <Logo />
             </div>
-            <div className="links">
+            <div className="links ">
                 {Links.map(({name,href})=>(
                     <Link href={href} key={name}><p>{name}</p></Link>
                 ))}

@@ -66,7 +66,7 @@ const Steps: React.FC = () => {
                       />
                     </svg>
 
-                    <h1 className="font-bold text-lg">{item.number}</h1>
+                    <h1 className="font-bold text-lg dark:text-black">{item.number}</h1>
                   </span>
 
                   <p className="text-normal lg:w-[510px]  font-normal text-black">
