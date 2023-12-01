@@ -111,6 +111,7 @@ export const AuthStyles = styled.div`
     height: 3rem;
     padding: 1rem 1.5rem;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
     gap: 0.5rem;
     width: 100%;
