@@ -43,29 +43,40 @@ const Hero: React.FC<HeroProps> = () => {
     return (
         <>
             <Container className="flex flex-wrap lg:flex-row-reverse">
-                <div ref={svg1Ref} className="flex items-center justify-center w-full lg:w-1/2">
+                <div ref={svg1Ref} className="flex  items-center justify-center w-full lg:w-1/2">
                     <div className="relative">
                         <Image
                             src="/Hero.svg"
-                            width="616"
-                            height="617"
+                            width="517"
+                            height="697"
                             className={"object-cover "}
                             alt="Hero Illustration"
                             placeholder="empty"
                         />
-                    <div className="absolute bottom-0 right-20   xl:right-[200px]">
+                    <div ref={svg1Ref} className="absolute top-0 left-0     ">
                         <Image
-                            src="/HeroSecond.svg"
-                            width="616"
-                            height="617"
+                            src="/Pill.svg"
+                            width="108"
+                            height="73"
                             className={"object-cover"}
                             alt="Hero Illustration"
                             placeholder="empty"
                         />
                     </div>
                     </div>
+                    
+                <div ref={svg1Ref} className="absolute -bottom-0  left-0   ">
+                    <Image
+                        src="/HeroSecond.svg"
+                        width="330"
+                        height="185"
+                        className={"object-cover"}
+                        alt="Hero Illustration"
+                        placeholder="empty"
+                    />
                 </div>
-                <div ref={headingRef} className="flex items-center w-full mt-10 lg:w-1/2">
+                </div>
+                <div ref={headingRef} className="flex items-center w-full mt-20 lg:w-1/2">
                     <div className="max-w-2xl flex flex-col gap-10 mb-8">
                         <div>
                         <h1 className="text-3xl font-bold leading-snug tracking-tight text-blue lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
