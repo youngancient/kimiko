@@ -58,20 +58,34 @@ const Features: React.FC = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            const elementPosition = document?.getElementById('features-section')?.offsetTop;
+            const element = document?.getElementById('features-section');
 
-            if (elementPosition !== undefined && scrollPosition > elementPosition - window.innerHeight / 2) {
-                setIsAnimated(true);
-                controls.start({ opacity: 1, y: 0 });
+            if (element) {
+                const elementPosition = element.offsetTop;
+                const elementHeight = element.offsetHeight;
+
+                const isScrollIn = scrollPosition > elementPosition - window.innerHeight / 2;
+                const isScrollOut = scrollPosition < elementPosition - window.innerHeight / 2 - elementHeight;
+
+                if (isScrollIn || isScrollOut) {
+                    setIsAnimated(true);
+                    controls.start({ opacity: 1, y: 0 });
+                } else {
+                    setIsAnimated(false);
+                    controls.start({ opacity: 0, y: -20 });
+                }
             }
         };
 
-
         window.addEventListener('scroll', handleScroll);
+
+        handleScroll();
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [controls]);
+
 
     return (
         <div id="features-section" className="mt-10 bg-[#FBFBFD] dark:bg-black p-2">
