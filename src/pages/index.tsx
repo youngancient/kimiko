@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Steps from '@/components/Steps'
 import Benefit from '@/components/Benefit'
 import Faq from '@/components/Faq'
+import Enquires from '@/components/Enquires'
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Steps />
       <Benefit />
       <Faq />
+      <Enquires />
     </>
   )
 }
